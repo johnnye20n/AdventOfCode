@@ -103,9 +103,9 @@ for (var seed = 0; seed < seeds.Count; seed += 2)
             continue;
         }
         lowest = lowest > -1 ? Math.Min(res, lowest) : res;
-        Console.WriteLine($"{i} / {endrange}");
+        //Console.WriteLine($"{i} / {endrange}");
     }
-    Console.WriteLine($"seed {seed}/{seeds.Count} completed");
+    //Console.WriteLine($"seed {seed}/{seeds.Count} completed");
 }
 
 Console.WriteLine(lowest);

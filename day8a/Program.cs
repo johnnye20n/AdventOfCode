@@ -20,25 +20,25 @@ foreach (var kvp in map)
 
 
 var steps = 0;
-var current = map.First(x => x.Key == "AAA");
+
 var found = false;
+var current = map.First(x => x.Key == "AAA");
 
 do
 {
     foreach (var instruction in instructions)
     {
+
         steps++;
 
         var next = instruction == 'L' ? current.Value.Select(y => y.Key).First() : current.Value.Select(y => y.Value).First();
-        
-        if (next == "ZZZ")
+        if (next== "ZZZ")
         {
             found = true;
             break;
         }
 
         current = map.First(x => x.Key == next);
-
     }
 } while (found == false);
 
